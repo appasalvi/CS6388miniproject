@@ -1,0 +1,55 @@
+{
+  "components": {
+    "seeds": {
+      "petrinets": {
+        "src": "src/seeds/petrinets"
+      },
+      "project": {
+        "src": "src/seeds/project"
+      },
+      "test": {
+        "src": "src/seeds/test"
+      }
+    },
+    "decorators": {
+      "PetriNetsDecorator": {
+        "src": "src/decorators/PetriNetsDecorator"
+      }
+    },
+    "plugins": {
+      "ClassifyPetriNet": {
+        "src": "src/plugins/ClassifyPetriNet",
+        "test": "test/plugins/ClassifyPetriNet"
+      }
+    },
+    "visualizers": {
+      "PetriNetSimulator": {
+        "src": "panels/PetriNetSimulator/PetriNetSimulatorPanel",
+        "title": "PetriNetSimulator",
+        "panel": "src/visualizers/panels/PetriNetSimulator",
+        "secondary": false,
+        "widget": "src/visualizers/widgets/PetriNetSimulator"
+      }
+    }
+  },
+  "dependencies": {
+    "seeds": {},
+    "decorators": {},
+    "plugins": {
+      "GenFORMULA": {
+        "project": "formula",
+        "path": "node_modules/formula/src/plugins/GenFORMULA"
+      }
+    },
+    "visualizers": {
+      "FormulaEditor": {
+        "src": "panels/FormulaEditor/FormulaEditorPanel",
+        "title": "FormulaEditor",
+        "panel": "src/visualizers/panels/FormulaEditor",
+        "secondary": false,
+        "widget": "src/visualizers/widgets/FormulaEditor",
+        "project": "formula"
+      }
+    }
+  }
+}
